@@ -27,7 +27,7 @@ state.pokemonTypes = types.data;
 
 <template>
 <div class="m-6">
-  <ul class="grid grid-cols-9 gap-3">
+  <ul class="grid sm:grid-cols-9 xl:grid-cols-12 gap-3 grid-cols-3">
     <li class="text-center p-2 border-gray-400 border-2 rounded cursor-pointer flex flex-col justify-center items-center" v-for="type in state.pokemonTypes" :key="type.id" @click="toggleSelectedType(type.name)" :class="isSelected(type.name) ? 'bg-green-400 text-white' : 'bg-white'">
         <NuxtImg :src="type.image" :alt="type.name" />
         <p>{{ type.name }}</p>
